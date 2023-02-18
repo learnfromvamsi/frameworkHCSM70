@@ -10,13 +10,13 @@ public class CoreJavaVideoPage {
 		
 	@FindBy(xpath="//h1")
 	private WebElement pageHeader;
-	@FindBy(xpath="//button[.='Play']")
+	@FindBy(xpath="//button[@aria-label='Play']")
 	private WebElement playButton;
 	
 	@FindBy(xpath="//a[@class='close_cookies']")
 	private WebElement closeCookies;
 	
-	@FindBy(xpath="//button[.='Play']")
+	@FindBy(xpath="//button[@aria-label='Pause']")
 	private WebElement pauseButton;
 	
 	@FindBy(xpath="//span[.='Add To Wishlist']")
