@@ -31,21 +31,17 @@ public class CoreJavaVideoPage {
 	}
 	
 	//utilization
-	
 	public String getPageHeader() {
 		return pageHeader.getText();
 	}
-	
 	public void closeCookies() {
 		closeCookies.click();
 	}
 	public void clickPlayButton() {
-		playButton.click();
-		
+		playButton.click();	
 	}
 	public void clickPauseButton() {
-		pauseButton.click();
-		
+		pauseButton.click();	
 	}
 	public void addToWishList() {
 		addToWishList.click();	
