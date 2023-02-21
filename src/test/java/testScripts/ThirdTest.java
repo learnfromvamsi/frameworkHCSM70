@@ -10,6 +10,12 @@ public class ThirdTest extends BaseClass {
 	@Test
 	public void thirdTest() throws InterruptedException {
 		SoftAssert soft = new SoftAssert();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		home.searchFor("core java for selenium");
 		soft.assertEquals(coreJava.getPageHeader(),"CORE JAVA FOR SELENIUM");
 		coreJava.clickCoreJavaForSeleniumLink();
