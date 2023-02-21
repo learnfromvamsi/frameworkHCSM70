@@ -20,12 +20,6 @@ public class FirstTest extends BaseClass {
 		selenium.doubleClickPlusButton(web);
 		selenium.clickAddToCart();
 		web.handleAlert();
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		web.explicitlywait(time,selenium.getItemAddedMessage());
 		web.takeScreenshot();
 		soft.assertTrue(selenium.getItemAddedMessage().isDisplayed());
