@@ -127,6 +127,7 @@ public class WebDriverUtility {
 		 */
 	  public void handleAlert() {
 		  driver.switchTo().alert().accept();
+		  
 	  }
 	  /**
 		 * This method is used to handle child browser pop up
