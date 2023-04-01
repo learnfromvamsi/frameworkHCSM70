@@ -12,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,14 +21,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverUtility {
 	WebDriver driver;
+	
 	/*
 	 * this method is  used to navigate to application
 	 */
 	
 	public WebDriver openApplication(String browser, String url, long time) {
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
 		switch(browser)
 		{
-		case "chrome" : driver =new ChromeDriver();
+		case "chrome" : driver =new ChromeDriver(options);
+						
 						break;
 									
 		case "edge"	 : driver = new EdgeDriver();	
