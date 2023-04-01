@@ -13,19 +13,15 @@ public class FirstTest extends BaseClass {
 		home.clickGears();
 		home.clickSkillrarydemoApp();
 		web.handleChildBrowser();
+		
 		soft.assertTrue(skillraryDemo.getPageHeader().isDisplayed());
 		skillraryDemo.mouseHoverToCourse(web);
 		skillraryDemo.clickSeleniumTraining();
+		
 		soft.assertEquals(selenium.getPageHeader().getText(),"Selenium Training");
 		selenium.doubleClickPlusButton(web);
 		selenium.clickAddToCart();
 		web.handleAlert();
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		web.explicitlywait(time,selenium.getItemAddedMessage());
 		web.takeScreenshot();
 		soft.assertTrue(selenium.getItemAddedMessage().isDisplayed());
